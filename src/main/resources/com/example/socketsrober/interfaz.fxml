@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.socketsrober.ChatClientFXController"
+            style="-fx-background-color: #f4f6f9; -fx-font-family: 'Segoe UI';">
+    <top>
+        <HBox style="-fx-background-color: #2c3e50; -fx-padding: 15;">
+            <Label text="Chat Cliente"
+                   style="-fx-text-fill: white;
+                          -fx-font-size: 18px;
+                          -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+    <center>
+        <TextArea fx:id="areaChat"
+                  editable="false"
+                  wrapText="true"
+                  style="-fx-background-color: white;
+                         -fx-control-inner-background: white;
+                         -fx-padding: 10;
+                         -fx-font-size: 13px;
+                         -fx-border-color: #dcdcdc;"/>
+    </center>
+    <bottom>
+        <HBox spacing="10"
+              style="-fx-background-color: #ecf0f1;
+                     -fx-padding: 10;
+                     -fx-border-color: #dcdcdc;">
+            <TextField fx:id="campoMensaje"
+                       promptText="Escribe un mensajee..."
+                       style="-fx-pref-height: 40;
+                              -fx-font-size: 14px;"/>
+
+            <Button text="Enviar"
+                    onAction="#enviarMensaje"
+                    style="-fx-background-color: #3498db;
+                           -fx-text-fill: white;
+                           -fx-font-size: 14px;
+                           -fx-font-weight: bold;
+                           -fx-padding: 10 20;
+                           -fx-background-radius: 8;"/>
+        </HBox>
+    </bottom>
+</BorderPane>
